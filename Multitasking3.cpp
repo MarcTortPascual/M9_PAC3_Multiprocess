@@ -12,10 +12,12 @@ void processname(){
     std::cin >> name;
     //posem el nom en el vector
     names.push_back(name);
+    //imprimim els valor contiguts en el array
     std::cout << "Valors en l'array: " << std::endl;
     for (auto name : names){
         std::cout << name << std::endl;
     }
+    //escollim y imprimim el nom
     std::string chosed = names.at(rand() % (names.size()));
     std::cout << std::endl;
     std::cout << "Benvingut " << chosed << std::endl;
