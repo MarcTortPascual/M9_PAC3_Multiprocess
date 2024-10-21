@@ -33,12 +33,14 @@ int main (int argc, char ** argv){
         if (id == 0) {
             
             processname();
-            //sortim del bucle perque la concio segueix sent certa i no interesa que
-            //el mateix process executi la funció mes de una vegada
-            //aixi ens estaviem porcessos duplicats
-            //si el porces fill crees un altre fill aquest fill tindria els valors del primer fill
+            //sortim del bucle perque la condició segueix sent certa i no interesa que
+            //el mateix process executi la funció mes de una vegada,
+            //aixi ens estaviem porcessos duplicats.
+            // En el cas que aixi una iteració del bucle el fill crearia un altre fill y aquest fill tindria els valors del primer fill
+            //ya que el primer fill actuaria com ha pare del fill,
             //pertant el vector contridria el valor inserit pel pare y pel fill
-            //per aixo tenim que autar el bucle avans de hora.
+            // y podria donar la sensació de que els processos comparteixen memoria quan aixó es fals.
+            //Per això tenim que auturar el bucle avans de hora.
             break;
         }
         if (id > 0) {
